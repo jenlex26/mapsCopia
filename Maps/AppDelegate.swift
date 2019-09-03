@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
+import Parse
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +19,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        IQKeyboardManager.shared.toolbarManageBehaviour = .byTag
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 40
+
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = "0uJjBWAsp0EoVy67qLlyURkrpS3mhwyngreFRpzo"
+            $0.clientKey = "Lqj66pJ3qWCnLVsEfindfo9EiCi8np6XShoC7adA"
+            $0.server = "https://parseapi.back4app.com"
+        }
+        Parse.initialize(with: configuration)
+        
+        saveInstallationObject()
         return true
     }
 
+    func saveInstallationObject(){
+        if let installation = PFInstallation.current(){
+            installation.saveInBackground {
+                (success: Bool, error: Error?) in
+                if (success) {
+                    print("You have successfully connected your app to Back4App!")
+                } else {
+                    if let myError = error{
+                        print(myError.localizedDescription)
+                    }else{
+                        print("Uknown error")
+                    }
+                }
+            }
+        }
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
