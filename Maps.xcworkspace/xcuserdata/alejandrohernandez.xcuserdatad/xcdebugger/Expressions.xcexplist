@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in DashboardPresenter.performMaps():DashboardPresenter.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DashboardPresenter.performMaps():DashboardPresenter.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataMaps.country">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DashboardVC.tableView(_:numberOfRowsInSection:):DashboardVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arrModel.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in DashboardVC.performMaps():DashboardVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arrModel">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in DashboardVC.viewDidLoad():DashboardVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in static APIManager.performMaps(type:completion:):APIManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "DashboardVC.viewDidLoad():DashboardVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
